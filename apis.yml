@@ -1,17 +1,37 @@
 aid: savana
 name: Savana
-description: 'Savana is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Savana is a Malvern, Pennsylvania based financial software company, founded
+  in 2009, that sells a cloud-native, API-first Digital Delivery Platform to banks,
+  credit unions and fintechs. The platform sits above the core banking system rather
+  than replacing it, unifying banker-facing experiences (CRM, BPM, servicing, assisted
+  account opening) and customer-facing experiences (online and mobile banking, digital
+  account opening) across any core, and shipping 140+ pre-built configurable servicing
+  workflows. Savana markets a set of "Banking APIs" that orchestrate whole servicing
+  processes — not just data exchange — between assisted and self-service channels,
+  but as of this profile the company publishes no public developer portal, API reference,
+  or machine-readable specification; documentation and the status page are reachable
+  only by authenticated customers. Savana raised a $45M Series A led by Georgian with
+  participation from Fiserv in 2022.'
+image: https://savanainc.com/wp-content/uploads/2025/07/headerlogo.png
 url: https://raw.githubusercontent.com/api-evangelist/savana/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Banking
+- Financial Services
+- Core Banking
+- Digital Banking
+- Credit Unions
+- Fintech
+- Account Opening
+- Workflow Automation
+- CRM
+- BPM
+- Bank Servicing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,70 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/savana-domain-security.yml
+- type: Conformance
+  url: conformance/savana-conformance.yml
+- type: Lifecycle
+  url: lifecycle/savana-lifecycle.yml
+- type: LLMsTxt
+  url: llms/savana-llms.txt
 - type: Website
+  url: https://savanainc.com/
+- type: Platform
+  url: https://savanainc.com/platform/
+- type: Support
+  url: https://savanainc.com/support/
+- type: HelpCenter
+  url: https://savanainc.happyfox.com/
+- type: Blog
+  url: https://savanainc.com/blog/
+- type: BlogRSS
+  url: https://savanainc.com/feed/
+- type: News
+  url: https://savanainc.com/company/news/
+- type: GitHubOrganization
+  url: https://github.com/savanainc
+- type: TermsOfService
+  url: https://savanainc.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://savanainc.com/privacy-policy/
+- type: Compliance
+  url: https://savanainc.com/company/
+- type: Careers
+  url: https://savanainc.com/company/careers/
+- type: ContactUs
+  url: https://savanainc.com/contact/
+- type: Demo
+  url: https://savanainc.com/request-a-demo/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/savana-inc./
+- type: YouTube
+  url: https://www.youtube.com/channel/UCR2YGJCa2VJGIO9QpnwRAAw
+- type: SecondaryMarket
   url: https://forgeglobal.com/savana_stock/
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Savana markets "Banking APIs" as the core of its platform but publishes no
+    developer surface at all — the 13-page Yoast sitemap ends at "Request a Demo",
+    the api./docs./developer. subdomains do not resolve, and the only documentation
+    host that exists (savanainc.happyfox.com) is a customer login wall.
+  evidence:
+  - url: https://savanainc.com/request-a-demo/
+    status: 200
+  - url: https://savanainc.com/developers
+    status: 404
+  - url: https://savanainc.com/openapi.json
+    status: 404
+  - url: https://savanainc.happyfox.com/
+    status: 200
+  - url: http://status.savanainc.com/
+    status: 301
+  checked: '2026-08-05'

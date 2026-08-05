@@ -1,0 +1,45 @@
+generated: '2026-08-05'
+method: probed
+source: live probe of status.savanainc.com and savanainc.com
+note: >-
+  Savana operates a status page, but it is not a public one. status.savanainc.com
+  resolves and 301s over HTTP to a Microsoft Entra ID SAML sign-in that fronts
+  savinternal.statuspage.io — the "savinternal" subdomain names it as an internal
+  Statuspage. Over HTTPS the host does not complete a TLS handshake at all. No
+  StatusPage pointer is wired in apis.yml, because a status page nobody outside
+  the company can read is not operational transparency. Likewise no versioning or
+  deprecation policy is published anywhere on the public site, so no Deprecation
+  pointer is wired.
+versioning:
+  scheme: unknown
+  docs: null
+  evidence: no public API reference or versioning policy on savanainc.com
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  evidence: no deprecation or sunset policy published publicly
+sla:
+  url: null
+  uptime_target: null
+  evidence: no public SLA; terms at https://savanainc.com/terms-conditions/ do not publish uptime targets
+status_page:
+  url: https://status.savanainc.com/
+  public: false
+  gate: microsoft-entra-id-saml
+  backend: savinternal.statuspage.io
+  evidence:
+  - url: http://status.savanainc.com/
+    status: 301
+    redirect_to: https://login.microsoftonline.com/.../saml2 (RelayState savinternal.statuspage.io)
+  - url: https://status.savanainc.com/
+    status: 0
+    detail: TLS handshake did not complete
+support_portal:
+  url: https://savanainc.happyfox.com/
+  public: false
+  gate: customer-login
+  evidence:
+  - url: https://savanainc.happyfox.com/
+    status: 200
+    detail: HappyFox "Savana Customer Care Center" login wall; no anonymous knowledge base
+deprecated_operations: []

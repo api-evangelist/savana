@@ -1,0 +1,70 @@
+# Savana
+
+> Savana is a Malvern, Pennsylvania financial software company (founded 2009) selling a cloud-native,
+> API-first Digital Delivery Platform to banks, credit unions and fintechs. It sits above the core
+> banking system rather than replacing it, unifying banker-facing servicing (CRM, BPM, assisted
+> account opening) and customer-facing digital banking on one workflow foundation.
+
+Savana markets "Banking APIs" that orchestrate whole servicing processes between assisted and
+self-service channels. As of 2026-08-05 those APIs are **not publicly documented**: there is no
+developer portal, no API reference, no OpenAPI/AsyncAPI/GraphQL specification, no SDK, no sandbox,
+and no public status page. Product documentation and the status page are behind a customer login
+(HappyFox) and Microsoft Entra ID SSO respectively. Access appears to be sold through the
+"Request a Demo" sales path.
+
+generated: 2026-08-05
+method: generated
+source: apis.yml + api-evangelist/savana repository artifacts
+
+## Company
+
+- [Savana](https://savanainc.com/): Company home — unified banking platform for banks, credit unions and fintechs.
+- [Platform](https://savanainc.com/platform/): The Digital Delivery Platform, banking APIs, and ecosystem integrations.
+- [Banker Experience](https://savanainc.com/solutions/banker-experience/): CRM, BPM, servicing and assisted account opening for bank staff.
+- [Customer Experience](https://savanainc.com/solutions/customer-experience/): Online and mobile banking plus digital account opening.
+- [Company](https://savanainc.com/company/): About Savana, including its published SOC 1 Type II, SOC 2 Type II, PCI, HIPAA and FFIEC certification claims.
+- [Careers](https://savanainc.com/company/careers/): Open roles.
+
+## Docs and support
+
+- [Support](https://savanainc.com/support/): Support landing page and contact routes.
+- [Customer Care Center](https://savanainc.happyfox.com/): HappyFox support portal — **login required**, no anonymous knowledge base.
+- [Product Guides](https://savanainc.com/resources/product-guides/): Public product guide collection (marketing-tier, not API reference).
+- [Resources](https://savanainc.com/resources/): Thought leadership, guides and whitepapers.
+- [Request a Demo](https://savanainc.com/request-a-demo/): The only public route to platform access.
+
+## Specs
+
+No machine-readable API contract is published. Probed and missed on 2026-08-05:
+`/openapi.json`, `/openapi.yaml`, `/v1/openapi.json`, `/swagger.json`, `/api-docs`, `/docs`,
+`/redoc`, `/graphql`, `/api`, `/developers`, `/api-reference` — all 404 on savanainc.com; and
+`api.`, `docs.`, `developer.`, `developers.`, `apidocs.`, `sandbox.` subdomains do not resolve.
+
+## Well-known
+
+Every `/.well-known/` document returned 404 on savanainc.com: `security.txt`,
+`openid-configuration`, `oauth-authorization-server`, `api-catalog`, `ai-plugin.json`,
+`agent-card.json`, `agent.json`.
+
+## Blog and news
+
+- [Blog](https://savanainc.com/blog/): Savana blog.
+- [Blog RSS](https://savanainc.com/feed/): Feed.
+- [News & Press](https://savanainc.com/company/news/): Press releases and customer announcements.
+
+## Code
+
+- [GitHub organization](https://github.com/savanainc): Savana, Inc. — one public repository, a fork of `Flutterando/modular` (Dart). No first-party SDK or client library is published on npm, PyPI, Maven Central, NuGet, RubyGems, Packagist, or crates.io.
+
+## Legal
+
+- [Terms & Conditions](https://savanainc.com/terms-conditions/)
+- [Privacy Policy](https://savanainc.com/privacy-policy/)
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/savana/refs/heads/main/apis.yml): APIs.json profile for Savana.
+- [conformance/savana-conformance.yml](https://raw.githubusercontent.com/api-evangelist/savana/refs/heads/main/conformance/savana-conformance.yml): Published compliance claims and unverifiable API standards.
+- [lifecycle/savana-lifecycle.yml](https://raw.githubusercontent.com/api-evangelist/savana/refs/heads/main/lifecycle/savana-lifecycle.yml): Versioning, deprecation, SLA and the gated status page.
+- [security/savana-domain-security.yml](https://raw.githubusercontent.com/api-evangelist/savana/refs/heads/main/security/savana-domain-security.yml): TLS, HSTS, DNSSEC, CAA, SPF, DMARC probe.
+- [well-known/savana-well-known.yml](https://raw.githubusercontent.com/api-evangelist/savana/refs/heads/main/well-known/savana-well-known.yml): `/.well-known/` probe results.

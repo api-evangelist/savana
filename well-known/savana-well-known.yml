@@ -1,0 +1,36 @@
+generated: '2026-08-05'
+method: probed
+source: live GET of /.well-known/* on the only reachable Savana host
+host: https://savanainc.com
+note: >-
+  Every /.well-known/ discovery document was probed and every one returned 404.
+  Savana resolves no api./docs./developer. host (all NXDOMAIN), so savanainc.com
+  is the only host available to probe. No document was saved because none exists;
+  this file records the probe result, and no WellKnown / SecurityTxt pointer is
+  wired in apis.yml — a directory of misses must not be credited as a discovery
+  surface.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+hosts_unresolvable:
+- api.savanainc.com
+- docs.savanainc.com
+- developer.savanainc.com
+- developers.savanainc.com
+- apidocs.savanainc.com
+- sandbox.savanainc.com
+- app.savanainc.com
+- trust.savanainc.com
+- security.savanainc.com
