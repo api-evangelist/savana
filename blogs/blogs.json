@@ -6,16 +6,17 @@
       "feed_url": "https://savanainc.happyfox.com/",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "none",
+      "error": "parse_failed"
     },
     {
       "source": "https://savanainc.com/blog/",
       "feed_url": "https://savanainc.com/feed/",
       "title": "",
-      "saved": 0,
+      "saved": 5,
       "method": "discovered"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-08-06T14:08:46Z"
+  "post_count": 5,
+  "fetched": "2026-08-15T12:11:08Z"
 }
