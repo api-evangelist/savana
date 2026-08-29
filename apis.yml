@@ -12,6 +12,17 @@ description: 'Savana is a Malvern, Pennsylvania based financial software company
   or machine-readable specification; documentation and the status page are reachable
   only by authenticated customers. Savana raised a $45M Series A led by Georgian with
   participation from Fiserv in 2022.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://savanainc.com/wp-content/uploads/2025/07/headerlogo.png
 url: https://raw.githubusercontent.com/api-evangelist/savana/refs/heads/main/apis.yml
 x-type: company
