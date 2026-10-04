@@ -45,13 +45,13 @@ modified: '2026-08-05'
 tags:
 - Company
 - Banking
-- Financial-Services
+- Financial Services
 - Core Banking
 - Digital Banking
 - Credit Union
 - Fintech
 - Account Opening
-- Workflow-Automation
+- Workflow Automation
 - CRM
 - Business Process Management
 - Bank Servicing
@@ -68,6 +68,8 @@ tags_raw:
 - CRM
 - BPM
 - Bank Servicing
+- Financial-Services
+- Workflow-Automation
 apis: []
 maintainers:
 - FN: Kin Lane
